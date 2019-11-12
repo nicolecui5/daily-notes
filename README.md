@@ -3,4 +3,7 @@
 ## To-do List
 
 - [x] setup git repo
-- [ ] write rest controller
+- [ ] write rest controllers
+- [ ] getNoteByDate
+- [ ] updateNoteByDate
+- [ ] deleteNoteByDate
