@@ -7,10 +7,9 @@ exports.default = void 0;
 
 var _express = require("express");
 
-var _note = _interopRequireDefault(require("../controllers/note"));
+var _note = require("../controllers/note");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var router = (0, _express.Router)();
+const router = (0, _express.Router)();
 exports.default = router;
-router.get('/getNotebyDate/:date', _note.default);
+router.get('/getNoteByDate/:year-:month-:day', _note.getNoteByDate);
+router.put('/putNoteByDate/:year-:month-:day', _note.updateNoteByDate); // router.delete();

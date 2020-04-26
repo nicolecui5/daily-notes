@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { connection } from 'react-redux';
 
-export class Calendar extends Component {
+class Calendar extends Component {
   state = {};
 
   render() {
@@ -48,3 +49,14 @@ export class Calendar extends Component {
     );
   }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+  ...state,
+  ...ownProps
+});
+
+// const mapDispatchToProps = (dispatch) => ({
+// })
+
+export connect(mapStateToProps, null)(Calender);
+
